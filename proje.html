@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+.mySlides {display: none}
+</style>
+</head>
+<body class="w3-content w3-border-left w3-border-right ">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-light-grey w3-collapse w3-top" style="z-index:3;width:260px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-transparent w3-display-topright"></i>
+    <h3>VIA GROUPS</h3>
+    
+    
+    <hr>
+    <form action="/" target="_blank">
+      <p><label><i class="fa fa-calendar-check-o"></i> Giriş Tarihi </label></p>
+      <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckIn" required>          
+      <p><label><i class="fa fa-calendar-o"></i> Çıkış Tarihi</label></p>
+      <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckOut" required>         
+      <p><label><i class="fa fa-male"></i> Yetişkinler </label></p>
+      <input class="w3-input w3-border" type="number" value="1" name="Yetişkinler" min="1" max="6">              
+      <p><label><i class="fa fa-child"></i> Çocuklar </label></p>
+      <input class="w3-input w3-border" type="number" value="0" name="Çocuklar" min="0" max="6">
+      <p><button class="w3-button w3-block w3-green w3-left-align" type="submit"><i class="fa fa-search w3-margin-right"></i> Olanakları Ara </button></p>
+
+  </div>
+  <div class="w3-bar-block">
+    <a href="#apartment" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-building"></i> Apart</a>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-16" onclick="document.getElementById('subscribe').style.display='block'"><i class="fa fa-rss"></i> Mail</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-envelope"></i> İletişim</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <span class="w3-bar-item">Rental</span>
+  <a href="javascript:void(0)" class="w3-right w3-bar-item w3-button" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-white" style="margin-left:260px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:80px"></div>
+
+  <!-- Slideshow Header -->
+  <div class="w3-container w3-black" id="Apartment">
+    <h2 class="w3-text-green">BG ICON</h2>
+    <div class="w3-display-container mySlides">
+    <img src="fotoğraflar\oturma odası.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Oturma Odası</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="fotoğraflar\mutfak.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Mutfak</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="fotoğraflar\yatak odası.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Yatak Odası</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="fotoğraflar\duş.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Banyo</p>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="fotoğraflar\oturma odası.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)" title="Oturma Odası">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="fotoğraflar\mutfak.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)" title="Mutfak">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="fotoğraflar\yatak odası.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)" title="Yatak Odası">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="fotoğraflar\duş.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4)" title="Duş">
+    </div>
+  </div>
+
+  <div class="w3-container">
+    <h4><strong>Apart</strong></h4>
+    <div class="w3-row w3-large">
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-male"></i> Konaklayabilen Kişi: 2</p>
+        <p><i class="fa fa-fw fa-bath"></i> Banyo: 1</p>
+        <p><i class="fa fa-fw fa-bed"></i> Yatak Odası: 1</p>
+      </div>
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-clock-o"></i> Giriş: 14.00</p>
+        <p><i class="fa fa-fw fa-clock-o"></i> Çıkış: 11.00</p>
+      </div>
+    </div>
+    <hr>
+    
+    <h4><strong>Olanaklar</strong></h4>
+    <div class="w3-row w3-large">
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-shower"></i> Duş</p>
+        <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+        <p><i class="fa fa-fw fa-tv"></i> TV</p>
+      </div>
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-cutlery"></i> Mutfak</p>
+        <p><i class="fa fa-fw fa-thermometer"></i> Isınma</p>
+        <p><i class="fa fa-fw fa-wheelchair"></i> Engelliye Uygun</p>
+      </div>
+    </div>
+    <hr>
+    
+    <h4><strong>Ekstra Bilgi</strong></h4>
+    <p>Apartlarımızı her gün temizleriz ve böyle olmasını seviyoruz. BG ICON'un tadını çıkarın.</p>
+    <p>Ödeme Yöntemleri: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
+    <hr>
+    
+    <h4><strong>Kurallar</strong></h4>
+    <p>3 GÜN ÖNCESİNE KADAR
+        Rezervasyonlarınızı giriş tarihinden 3 gün öncesine kadar ücretsiz iptal etme hakkına sahipsiniz. Eğer rezervasyon giriş tarihine 3 günden daha kısa bir süre içerisinde iptal ederseniz konaklama tutarının tamamı iptal cezası olarak alınır.</p>
+    <p>Mevcut tarihler ve özel tekliflerle ilgili güncellemeleri almak için iletişime geçin.</p>
+    <p><button class="w3-button w3-green w3-third" onclick="document.getElementById('iletişim').style.display='block'">İletişim</button></p>
+  </div>
+  <hr>
+  
+  <!-- Contact -->
+  <div class="w3-container" id="iletisim adresleri">
+    <h2>İletişim Adresleri </h2>
+    <i class="fa fa-map-marker" style="width:30px"></i> Denizli , Türkiye<br>
+    <i class="fa fa-phone" style="width:30px"></i> Telefon: +90 5536809194<br>
+    <i class="fa fa-envelope" style="width:30px"> </i> Email: viagroups@mail.com<br>
+    <p>Buradan da soru sorabilirsiniz:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="İsim" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Mesaj" required name="Message"></p>
+    <button type="submit" class="w3-button w3-green w3-third">Mesaj Gönder</button>
+    </form>
+  </div>
+  
+  <footer class="w3-container w3-padding-16" style="margin-top:32px">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></footer>
+
+<!-- End page content -->
+</div>
+
+<!-- Subscribe Modal -->
+<div id="subscribe" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom w3-padding-large">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-button w3-xlarge w3-right w3-transparent"></i>
+      <h2 class="w3-wide">SUBSCRIBE</h2>
+      <p>Join our mailing list to receive updates on available dates and special offers.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-green w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Script to open and close sidebar when on tablets and phones
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Slideshow Apartment Images
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>
+
+</body>
+</html>
